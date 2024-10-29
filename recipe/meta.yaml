@@ -10,6 +10,8 @@ source:
     - {{ cran_mirror }}/src/contrib/N2R_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/N2R/N2R_{{ version }}.tar.gz
   sha256: 59324daea86f2763ca637fef99c553702507b9348ee84c22efba2e333ca07d2d
+  patches:
+    - patches/0001-use-AR-variable.patch
 
 build:
   number: 1
