@@ -1,4 +1,4 @@
-{% set version = "1.0.4" %}
+{% set version = "1.0.5" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/N2R_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/N2R/N2R_{{ version }}.tar.gz
-  sha256: 944d12e2c958183daf4c43a636df0dba14671e405b68b16bcbdd8a948037009d
+  sha256: 2d40b1fde2bdbf97bdabdcea4e787294fb2d6be8fb41a8bd5c04efded69e0826
   patches:
     - patches/0001-use-AR-variable.patch
 
