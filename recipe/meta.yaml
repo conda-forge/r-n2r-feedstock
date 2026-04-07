@@ -38,6 +38,7 @@ requirements:
     - {{ posix }}zip               # [win]
     - cross-r-base {{ r_base }}    # [build_platform != target_platform]
     - r-matrix                     # [build_platform != target_platform]
+    - r-bh                         # [build_platform != target_platform]
     - r-rcpp >=1.0.4               # [build_platform != target_platform]
     - r-rcppeigen                  # [build_platform != target_platform]
     - r-rcppspdlog                 # [build_platform != target_platform]
@@ -45,6 +46,7 @@ requirements:
     - _openmp_mutex                # [linux]
     - llvm-openmp                  # [osx]
     - r-base
+    - r-bh
     - r-matrix
     - r-rcpp >=1.0.4
     - r-rcppeigen
