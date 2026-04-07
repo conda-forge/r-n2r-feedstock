@@ -37,6 +37,10 @@ requirements:
     - {{ posix }}coreutils         # [win]
     - {{ posix }}zip               # [win]
     - cross-r-base {{ r_base }}    # [build_platform != target_platform]
+    - r-matrix                     # [build_platform != target_platform]
+    - r-rcpp >=1.0.4               # [build_platform != target_platform]
+    - r-rcppeigen                  # [build_platform != target_platform]
+    - r-rcppspdlog                 # [build_platform != target_platform]
   host:
     - _openmp_mutex                # [linux]
     - llvm-openmp                  # [osx]
