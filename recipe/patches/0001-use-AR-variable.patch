@@ -1,25 +1,39 @@
-From 3d92899323858625f26a6aaa61b6b056c8f6cc03 Mon Sep 17 00:00:00 2001
+From c90c59a0afaac5bb9b5195b557b6928978731317 Mon Sep 17 00:00:00 2001
 From: Daniel Nachun <daniel.nachun@gmail.com>
-Date: Tue, 29 Oct 2024 15:33:46 -0700
+Date: Mon, 6 Apr 2026 22:00:56 -0700
 Subject: [PATCH] use AR variable
 
 ---
- src/n2/Makefile | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
+ src/n2/Makefile     | 2 +-
+ src/n2/Makefile.win | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/src/n2/Makefile b/src/n2/Makefile
-index a091d23..ccb5544 100644
+index fd3050e..fe42e99 100644
 --- a/src/n2/Makefile
 +++ b/src/n2/Makefile
 @@ -7,7 +7,7 @@ LIB = ../libn2.a
  lib: $(LIB)
  
- $(LIB): base.o hnsw.o hnsw_node.o distance.o heuristic.o mmap.o
+ $(LIB): hnsw.o hnsw_build.o hnsw_search.o hnsw_model.o hnsw_node.o heuristic.o mmap.o
+-	ar rvs $@ $?
++	$(AR) rvs $@ $?
+ 
+ clean:
+ 	@-rm -f *.o $(LIB) 
+diff --git a/src/n2/Makefile.win b/src/n2/Makefile.win
+index fd3050e..fe42e99 100644
+--- a/src/n2/Makefile.win
++++ b/src/n2/Makefile.win
+@@ -7,7 +7,7 @@ LIB = ../libn2.a
+ lib: $(LIB)
+ 
+ $(LIB): hnsw.o hnsw_build.o hnsw_search.o hnsw_model.o hnsw_node.o heuristic.o mmap.o
 -	ar rvs $@ $?
 +	$(AR) rvs $@ $?
  
  clean:
  	@-rm -f *.o $(LIB) 
 -- 
-2.47.0
+2.53.0
 
